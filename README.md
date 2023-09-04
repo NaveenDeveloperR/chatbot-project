@@ -1,7 +1,7 @@
 
 # AI Chatbot for Public Welfare
 
-![Chatbot Screenshot](chatbot-screenshot.png)
+![Chatbot Screenshot](chatbot.png)
 
 ---
 
