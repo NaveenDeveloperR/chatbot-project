@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+</head>
+<body>
+  <div id="center-text">
+    <h1 style="margin-top: -20%; color: initial;">Welcome</h1>
+    <p style="font-size: 1.2rem; color: #555; margin-top: 10px; font-weight: bold; text-align: center;">
+      AI-based Life Assistance Chatbot Integration<br>for Public Welfare
+    </p>
+  </div>
+  <div id="body">
+    <div id="team-members">
+      <h2>Meet Our Team</h2>
+      <ul class="team-list">
+        <li>Naveen Kumar.S</li>
+        <li>E. Raveena</li>
+        <li>Vaishnavi.S</li>
+        <li>Hemalatha.C</li>
+      </ul>
+    </div>
+
+    <div id="chat-circle" class="btn btn-raised">
+      <div id="chat-overlay"></div>
+      <img style="margin-top: -37%; margin-left: -30%;" src="{{ url_for('static', filename='images/iconr.png') }}" alt="Icon">
+    </div>
+
+    <div class="chat-box">
+      <div class="chat-box-header">
+        ChatBot
+        <span class="chat-box-toggle"><i class="material-icons">close</i></span>
+      </div>
+      <div class="chat-box-body">
+        <div class="chat-box-overlay"></div>
+        <div class="chat-logs"></div>
+      </div>
+      <div class="chat-input">
+        <form id="chat-form" action="/ask" method="POST">
+          <input type="text" id="chat-input" name="message" placeholder="Send a message..." />
+          <button type="submit" class="chat-submit" id="chat-submit">
+            <img style="margin-top: 20%; margin-left: -20%; max-width: 100%;" src="{{ url_for('static', filename='images/send.png') }}" alt="Send Icon">
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="{{ url_for('static', filename='js/addon.js') }}"></script>
+</body>
+</html>
